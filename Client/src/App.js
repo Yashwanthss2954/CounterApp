@@ -60,7 +60,7 @@ const MyCounter=()=>{
   const navigate=useNavigate();
   const MyfetchCounter=useCallback(async ()=>{
     try{
-      const response=await axios.get('https://counterapp-5cm5.onrender.com/api/myCounter');
+      const response=await axios.get('https://counterapp-83za.onrender.com/api/myCounter');
       dispatch({type:'MySet',mycount:response.data.mycount});
     }
     catch(err){
@@ -74,7 +74,7 @@ const MyCounter=()=>{
 
   const incrementCounter = useCallback(async () => {
     try {
-      await axios.post('https://counterapp-5cm5.onrender.com/api/mycounter/increment');
+      await axios.post('https://counterapp-83za.onrender.com/api/mycounter/increment');
       dispatch({ type: 'MyIncrement' });
     } catch (err) {
       console.error(err);
@@ -83,7 +83,7 @@ const MyCounter=()=>{
 
   const decrementCounter = useCallback(async () => {
     try {
-      await axios.post('https://counterapp-5cm5.onrender.com/api/mycounter/decrement');
+      await axios.post('https://counterapp-83za.onrender.com/api/mycounter/decrement');
       dispatch({ type: 'MyDecrement' });
     } catch (err) {
       console.error(err);
@@ -108,7 +108,7 @@ const Counter = () => {
 
   const fetchCounter = useCallback(async () => {
     try {
-      const response = await axios.get('https://counterapp-5cm5.onrender.com/api/counter');
+      const response = await axios.get('https://counterapp-83za.onrender.com/api/counter');
       dispatch({ type: 'SET', count: response.data.count });
     } catch (err) {
       console.error(err);
@@ -130,7 +130,7 @@ const Counter = () => {
 
   const decrementCounter = useCallback(async () => {
     try {
-      await axios.post('https://counterapp-5cm5.onrender.com/api/counter/decrement');
+      await axios.post('https://counterapp-83za.onrender.com/api/counter/decrement');
       dispatch({ type: 'DECREMENT' });
     } catch (err) {
       console.error(err);
